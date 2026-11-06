@@ -1,0 +1,143 @@
+/* Root */
+
+:root {
+    /* cores */
+    --cor-primaria: #344B40;
+    --cor-secundaria: #718879;
+    --cor-terciaria: #A9B9A6;
+    --cor-fundo: #F8F8F3;
+    --cor-secao: #E7EAE1;
+    --cor-texto: #626660;
+    --cor-titulo: #344B40;
+    --cor-subtitulo: #718879;
+    
+    /* imc */
+    --imc-azul: #55A6D9;
+    --imc-verde: #48A878;
+    --imc-amarelo: #E8C34A;
+    --imc-laranja: #E89A4A;
+    --imc-laranja-vermelho: #e84f4a;
+    --imc-vermelho: #da2f2f;
+
+    /* fontes */
+    --titulo: 'Oswald', serif;
+    --subtitulo: 'DM Sans', sans-serif;
+    --texto: 'DM Sans', sans-serif;
+    --especial: 'Redaction 10', sans-serif;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--texto);
+    background-color: var(--cor-secao);
+    color: var(--cor-texto);
+    font-size: 15px;
+}
+
+.titulo {
+    font-family: var(--titulo);
+    color: var(--cor-titulo);
+    font-size: 55px;
+}
+
+.subtitulo {
+    font-family: var(--subtitulo);
+    color: var(--cor-subtitulo);
+    font-size: 22px;
+}
+
+.titulo-secao {
+    font-family: var(--titulo);
+    color: var(--cor-titulo);
+    font-size: 35px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-secundaria); 
+    font-size: 20px;  
+    transition: .2s ease-in-out;
+}
+
+/* navbar */
+header {
+    background-color: var(--cor-secao);
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        min-height: 90px;
+        padding: 0 5%;
+
+        .logo {
+            font-family: var(--especial);
+            color: var(--cor-primaria);
+            display: flex;
+            align-items: center;
+            
+            
+
+            .img {
+                margin: 16px;
+            }
+            
+            img {
+                width: 60px;
+                height: 50px;
+            }
+
+            span {
+                font-size: 30px;
+                transition: 0.3s ease-in-out;
+            }
+        }
+
+        .logo span:hover {
+            cursor: pointer;
+            transform: translateY(-3px);
+        }
+
+        ul {
+            display: flex;
+            gap: 60px;
+            margin-block: 30px;
+
+            a {
+                border-bottom: 2px solid transparent;
+            }
+
+            a:hover {
+                border-bottom: 2px solid var(--cor-secundaria);
+            }
+        }
+
+        .btn-principal {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 16px;
+
+            a {
+                background-color: var(--cor-primaria);
+                color: var(--cor-fundo);
+                padding: 15px 25px;
+                border-radius: 30px;
+                transition: .2s ease-in-out;
+            }
+
+            a:hover {
+                transform: translateY(-3px);
+            }
+        }
+    }
+}
