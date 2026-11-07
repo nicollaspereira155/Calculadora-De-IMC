@@ -37,7 +37,7 @@ body {
     font-family: var(--texto);
     background-color: var(--cor-secao);
     color: var(--cor-texto);
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .titulo {
@@ -55,7 +55,7 @@ body {
 .titulo-secao {
     font-family: var(--titulo);
     color: var(--cor-titulo);
-    font-size: 35px;
+    font-size: 55px;
 }
 
 ul {
@@ -131,7 +131,7 @@ header {
                 background-color: var(--cor-primaria);
                 color: var(--cor-fundo);
                 padding: 15px 25px;
-                border-radius: 30px;
+                border-radius: 10px;
                 transition: .2s ease-in-out;
             }
 
@@ -140,4 +140,84 @@ header {
             }
         }
     }
+}
+
+/* inicio */
+#inicio {
+    padding: 50px 0;
+}
+
+.container {
+    min-height: 120vh;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-image: url('../img/fita-metrica-fundo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.titulo-secao {
+    display: flex;
+    justify-content: center;
+}
+
+#inicio p {
+    padding: 30px 150px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+
+    a {
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo);
+    padding: 15px 25px;
+    border-radius: 10px;
+    transition: .2s ease-in-out;
+    }
+
+    a:hover {
+        transform: translateY(-3px);
+    }
+}    
+
+.btn-secundario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+
+    a {
+    color: var(--cor-primaria);
+    padding: 15px 25px;
+    border-radius: 10px;
+    transition: .2s ease-in-out;
+    border: 2px solid var(--cor-primaria);
+    }
+
+    a:hover {
+        transform: translateY(-3px);
+    }
+}    
+
+/* sobre */
+#sobre {
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
 }
