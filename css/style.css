@@ -10,6 +10,7 @@
     --cor-texto: #626660;
     --cor-titulo: #344B40;
     --cor-subtitulo: #718879;
+    --cor-secao-rgba: rgba(231, 234, 225, 0.836);
     
     /* imc */
     --imc-azul: #55A6D9;
@@ -31,6 +32,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -67,6 +72,7 @@ a {
     color: var(--cor-secundaria); 
     font-size: 20px;  
     transition: .2s ease-in-out;
+    font-weight: 600;
 }
 
 /* navbar */
@@ -74,10 +80,17 @@ header {
     background-color: var(--cor-secao);
 
     nav {
+        background-color: var(--cor-secao-rgba);
+        backdrop-filter: saturate(180%) blur(20px);
         display: flex;
         justify-content: space-between;
         min-height: 90px;
         padding: 0 5%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
 
         .logo {
             font-family: var(--especial);
@@ -119,6 +132,10 @@ header {
             a:hover {
                 border-bottom: 2px solid var(--cor-secundaria);
             }
+
+            a.ativo {
+                border-bottom: 2px solid var(--cor-secundaria);
+            }
         }
 
         .btn-principal {
@@ -150,7 +167,7 @@ header {
 .container {
     min-height: 120vh;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 60px 20px;
     background-image: url('../img/fita-metrica-fundo.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -167,7 +184,11 @@ header {
 }
 
 #inicio p {
-    padding: 30px 150px;
+    max-width: 750px;
+    line-height: 1.7;
+    margin: 0 auto;
+    padding-block: 30px;
+    text-align: center;
 }
 
 .botoes {
@@ -215,9 +236,202 @@ header {
 
 /* sobre */
 #sobre {
-    padding: 80px 0;
+    padding: 120px 40px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 50px;
+}
+
+#sobre p {
+    padding: 30px 50px;
+}
+
+.sobre-imagem {
+    padding-top: 30px;
+    padding-right: 40px;
+    border-radius: 10px;
+
+    img {
+        border-radius: 10px;
+    }
+}
+
+/* calculadora */
+
+#calculadora {
+    background-color: var(--cor-secao);
+    padding: 100px 8%;
+    text-align: center;
+}
+
+#calculadora .titulo-secao {
+    margin-bottom: 15px;
+}
+
+#calculadora p {
+    max-width: 650px;
+    line-height: 1.7;
+    margin: 0 auto 45px;
+}
+
+/* Card */
+.calculadora-card {
+    background-color: var(--cor-fundo);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(52, 75, 64, 0.08);
+}
+
+.calculadora-card .subtitulo {
+    color: var(--cor-primaria);
+    font-family: var(--fonte-titulo);
+    font-size: 35px;
+    margin-bottom: 30px;
+    display: block;
+}
+
+#calculadora-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 8px;
+}
+
+.campo label {
+    color: var(--cor-primaria);
+    font-family: var(--fonte-principal);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.campo input {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--cor-fundo);
+    border: 2px solid var(--cor-terciaria);
+    border-radius: 10px;
+    outline: none;
+    color: var(--cor-primaria);
+    font-family: var(--fonte-principal);
+    font-size: 20px;
+    transition: 0.3s ease;
+}
+
+.campo input:focus {
+    border-color: var(--cor-secundaria);
+    box-shadow: 0 0 0 3px rgba(113, 136, 121, 0.15);
+}
+
+#calculadora-form .button {
+    margin-top: 8px;
+}
+
+#calculadora-form button {
+    width: 100%;
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo);
+    border: none;
+    cursor: pointer;
+    font-family: var(--fonte-principal);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 16px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+#calculadora-form button:hover {
+    transform: translateY(-3px);
+}
+
+#resultado {
+    margin-top: 25px;
+}
+
+.resultado-conteudo {
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.resultado-conteudo p {
+    color: var(--cor-texto);
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.resultado-conteudo h2 {
+    font-size: 35px;
+}
+
+.resultado-conteudo h3 {
+    font-size: 25px;
+}
+
+/* classificações */
+
+#classificacoes {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+#classificacoes .titulo-secao {
+    margin-bottom: 15px;
+}
+
+#classificacoes p {
+    max-width: 800px;
+    line-height: 1.7;
+    margin: 0 auto 45px;
+}
+
+.classificacoes-card {
+    background-color: var(--cor-fundo);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(52, 75, 64, 0.08);
+}
+
+.classificacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--cor-terciaria);
+}
+
+.azul {
+    color: var(--imc-azul);
+}
+
+.verde {
+    color: var(--imc-verde);
+}
+
+.amarelo {
+    color: var(--imc-amarelo);
+}
+
+.laranja {
+    color: var(--imc-laranja);
+}
+
+.laranja-vermelho {
+    color: var(--imc-laranja-vermelho);
+}
+
+.vermelho {
+    color: var(--imc-vermelho);
 }

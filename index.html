@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Body Analytics | Calculadora de IMC</title>
+    <title>Calculadora de IMC</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
                     <div class="img">
                         <img src="./img/colorido_centralizado.png" alt="Body Analytics">
                     </div>
-                    <span>Body Analytics</span>
+                    <span>Calculadora de IMC</span>
                 </div>
                 <div class="links">
                     <ul>
@@ -58,7 +58,55 @@
                 <p>O Índice de Massa Corporal (IMC) é uma medida internacional usada para calcular se uma pessoa está no peso ideal. Apesar de ser uma ferramenta útil, o IMC tem limitações e não considera fatores como a composição corporal, distribuição de gordura e massa muscular.</p>
             </div>
             <div class="sobre-imagem">
-                <img src="" alt="">
+                <img src="./img/formula-do-imc.webp" alt="Fórmula do IMC">
+            </div>
+        </section>
+        <section id="calculadora">
+            <h2 class="titulo-secao">Calcule já seu IMC!</h2>
+            <p>Informe seu peso e altura para calcular o seu Índice de Massa Corporal (IMC) e logo em seguida, descubra em qual categoria você se encontra.</p>
+            <div class="calculadora-card">
+                <h3 class="subtitulo">Insira seus dados</h3>
+                <form action="" id="calculadora-form">
+                    <div class="campo">
+                        <label for="peso">Peso (kg)</label>
+                        <input type="number" id="peso" placeholder="Ex: 70" step="0.1" required>
+                    </div>
+                    <div class="campo">
+                        <label for="altura">Altura (m)</label>
+                        <input type="number" id="altura" placeholder="Ex: 1.75" step="0.01" required>
+                    </div>
+                    <div class="button">
+                        <button class="btn-principal" type="submit">Calcular IMC</button>
+                    </div>
+                </form>
+                <div id="resultado"></div>
+                <h3 class="subtitulo">Confira as classificações &darr;</h3>
+            </div>
+        </section>
+        <section id="classificacoes">
+            <h2 class="titulo-secao">Classificações do IMC</h2>
+            <p>O Índice de Massa Corporal (IMC) é uma medida que relaciona o peso e a altura de uma pessoa, sendo utilizado para avaliar se ela está dentro do peso ideal. Abaixo estão as classificações do IMC, de acordo com a Organização Mundial da Saúde (OMS):</p>
+            <div class="classificacoes-card">
+                <div class="classificacao">
+                    <h3 class="azul">Abaixo do peso</h3>
+                    <p>IMC menor que 18,5</p>
+                </div>
+                <div class="classificacao">
+                    <h3 class="amarelo">Sobrepeso</h3>
+                    <p>IMC entre 25 e 29,9</p>
+                </div>
+                <div class="classificacao">
+                    <h3 class="laranja">Obesidade grau I</h3>
+                    <p>IMC entre 30 e 34,9</p>
+                </div>
+                <div class="classificacao">
+                    <h3 class="laranja-vermelho">Obesidade grau II</h3>
+                    <p>IMC entre 35 e 39,9</p>
+                </div>
+                <div class="classificacao">
+                    <h3 class="vermelho">Obesidade grau III (mórbida)</h3>
+                    <p>IMC maior ou igual a 40</p>
+                </div>
             </div>
         </section>
     </div>
